@@ -11,7 +11,7 @@ pipeline {
         sh ''
       }
     }
-    stage ('deploy') {
+    stage ('execute') {
       steps {
         sh ''
       }
