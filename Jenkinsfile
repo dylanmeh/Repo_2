@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage ('build') {
       steps {
-        sh returnStatus: true, script: '''npm install'''
+        tools {
+          nodejs 'npm'
+        }
       }
     }
     /** stage ('test') {
