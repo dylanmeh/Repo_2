@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage ('build') {
       steps {
-        sh returnStatus: true, script: '''yum install npm
-        npm install'''
+        sh returnStatus: true, script: '''npm install'''
       }
     }
     /** stage ('test') {
