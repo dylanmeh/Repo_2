@@ -4,6 +4,7 @@ pipeline {
     stage ('build') {
       steps {
           nodejs 'npm'
+            'npm install'
       }
     }
     /** stage ('test') {
