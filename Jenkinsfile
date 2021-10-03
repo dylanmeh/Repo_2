@@ -3,19 +3,18 @@ pipeline {
   stages {
     stage ('build') {
       steps {
-          nodejs 'npm'
-            npm install
+          mvn 'clean package'
       }
     }
-    /** stage ('test') {
+    stage ('test') {
       steps {
-        sh ''
+        mvn 'test'
       }
     }
     stage ('deploy') {
       steps {
-        sh ''
+        sh 'mvn exec:java'
       }
-    } **/
+    }
   }
 }  
