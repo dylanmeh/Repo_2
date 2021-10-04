@@ -25,7 +25,7 @@ pipeline {
     }
     stage ('deploy') {
       steps {
-        sh 'mvn exec:java'
+        sh 'mvn deploy'
       }
     }
   }
