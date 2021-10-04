@@ -26,7 +26,6 @@ pipeline {
     stage ('deploy') {
       steps {
         sh 'mvn install'
-      archiveArtifacts artifacts: '*.jar', followSymlinks: false
       }
     }
   }
